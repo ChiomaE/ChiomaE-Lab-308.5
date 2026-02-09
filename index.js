@@ -107,7 +107,32 @@ let changedArray = data.map((person) => ({
 
 let initialSum = 0;
 let ages = data.map((person) => parseInt(person.age));
-console.log(ages);
 
 const ageSum = ages.reduce((acc, cv) => acc + cv, initialSum);
-console.log(ageSum);
+// console.log(ageSum);
+
+const averageSum = ageSum / ages.length;
+// console.log(averageSum);
+
+//Part 3
+
+let changedAgeArray = data.map((person) => ({
+  id: person.id,
+  name: person.name,
+  occupation: person.occupation,
+  age: parseInt(person.age) + 1,
+}));
+
+let changedArrayCopy = [...changedArray];
+
+changedArrayCopy = changedArrayCopy.map((person) => ({
+  id: person.id,
+  name: person.name,
+  job: person.job,
+  age: parseInt(person.age) + 1,
+}));
+
+changedArray.updated_at = new Date();
+changedArrayCopy.updated_at = new Date();
+
+console.log("Original: ", changedArray, "Copy: ", changedArrayCopy);
