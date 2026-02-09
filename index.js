@@ -85,4 +85,9 @@ let data = [
 const sortedArray = data.sort(
   (personOne, personTwo) => personOne.age - personTwo.age,
 );
-console.log(sortedArray);
+// console.log(sortedArray);
+
+// 2
+
+const filteredArray = data.filter((person) => person.age < 50);
+console.log(filteredArray);
