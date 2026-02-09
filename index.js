@@ -90,4 +90,14 @@ const sortedArray = data.sort(
 // 2
 
 const filteredArray = data.filter((person) => person.age < 50);
-console.log(filteredArray);
+// console.log(filteredArray);
+
+// 3
+
+let changedArray = data.map((person) => ({
+  id: person.id,
+  name: person.name,
+  ["job"]: person.occupation,
+  age: parseInt(person.age) + 1,
+}));
+console.log(changedArray);
