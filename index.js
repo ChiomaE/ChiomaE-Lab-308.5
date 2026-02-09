@@ -5,9 +5,9 @@ const numArray = [1, 2, 3, 4, 5, 6];
 function sum(numToSum) {
   let sum = 0;
   for (num of numToSum) {
-        sum += num;
-    }
-    return sum;
+    sum += num;
+  }
+  return sum;
 }
 let sumofNums = sum(numArray);
 // console.log(sumofNums)
@@ -17,10 +17,10 @@ let sumofNums = sum(numArray);
 function average(numToSum) {
   let sum = 0;
   for (num of numToSum) {
-        sum += num;
-    }
+    sum += num;
+  }
   let average = sum / numToSum.length;
-    return average;
+  return average;
 }
 let averageofNums = average(numArray);
 // console.log(averageofNums)
@@ -33,7 +33,7 @@ function findLongestWord(arr) {
   let longest = arr.reduce(function (wordOne, wordTwo) {
     return wordOne.length > wordTwo.length ? wordOne : wordTwo;
   });
-    return longest;
+  return longest;
 }
 
 let longestWord = findLongestWord(stringArray);
@@ -55,4 +55,18 @@ function stringsLongerThan(arr, num) {
 }
 
 let result = stringsLongerThan(strArray, 3);
-console.log(result);
+// console.log(result);
+
+//5
+
+let maxNum = 10;
+
+function printNums(num) {
+  if (num >= 0) {
+    console.log(num);
+    num -= 1;
+    printNums(num);
+  }
+}
+
+printNums(maxNum);
