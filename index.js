@@ -82,6 +82,7 @@ let data = [
 ];
 
 // 1
+
 const sortedArray = data.sort(
   (personOne, personTwo) => personOne.age - personTwo.age,
 );
@@ -100,4 +101,13 @@ let changedArray = data.map((person) => ({
   ["job"]: person.occupation,
   age: parseInt(person.age) + 1,
 }));
-console.log(changedArray);
+// console.log(changedArray);
+
+// 4
+
+let initialSum = 0;
+let ages = data.map((person) => parseInt(person.age));
+console.log(ages);
+
+const ageSum = ages.reduce((acc, cv) => acc + cv, initialSum);
+console.log(ageSum);
