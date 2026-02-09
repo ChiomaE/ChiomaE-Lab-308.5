@@ -39,3 +39,20 @@ function findLongestWord(arr) {
 let longestWord = findLongestWord(stringArray);
 // console.log(longestWord);
 
+//4
+
+let strArray = ["say", "hello", "in", "the", "morning"];
+
+function stringsLongerThan(arr, num) {
+  let longerWords = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > num) {
+      longerWords.push(arr[i]);
+    }
+  }
+
+  return longerWords;
+}
+
+let result = stringsLongerThan(strArray, 3);
+console.log(result);
